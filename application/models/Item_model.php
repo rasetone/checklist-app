@@ -19,7 +19,7 @@ class Item_model extends CI_Model {
     if (isset($filter['checklist_id'])) $where .= " AND t_items.checklist_id = ".$filter['checklist_id'];
 
   	$this->db->where($where);
-  	$this->db->select('t_items.id, t_items.name, t_items.checklist_id, m_checklist.name as checklist_name, t_items.created_at, t_items.updated_at');
+  	$this->db->select('t_items.id, t_items.name, t_items.checklist_id, t_items.status, m_checklist.name as checklist_name, t_items.created_at, t_items.updated_at');
     $this->db->join('m_checklist', 'm_checklist.id = t_items.checklist_id');
     
   	$start = ($page - 1) * $perpage;

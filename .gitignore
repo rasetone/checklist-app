@@ -26,3 +26,5 @@ vendor/*
 
 application/test/build/*
 application/test/.phpunit.result.cache
+
+application/.env

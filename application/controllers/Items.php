@@ -6,6 +6,7 @@ class Items extends BaseController {
 	protected $user_id;
 	protected $name;
 	protected $checklist_id;
+	protected $status;
 
 	public function __construct(){
 		parent::__construct();
@@ -32,6 +33,7 @@ class Items extends BaseController {
 		$this->getRequest();
 		$name = $this->name;
 		$checklist_id = $this->checklist_id;
+		$status = $this->status;
 
 		if (empty($name)) {
 			$this->response(['message' => 'Name is required'], 500);
@@ -42,6 +44,7 @@ class Items extends BaseController {
 		} else {
 			$input['name'] = $name;
 			$input['checklist_id'] = $checklist_id;
+			$input['status'] = $status;
 			$input['created_by'] = $this->user_id;
 
 			if ($this->im->insert($input) > 0) {
@@ -59,6 +62,7 @@ class Items extends BaseController {
 			$this->getRequest();
 			$name = $this->name;
 			$checklist_id = $this->checklist_id;
+			$status = $this->status;
 
 			if (empty($name)) {
 				$this->response(['message' => 'Name is required'], 500);
@@ -69,6 +73,7 @@ class Items extends BaseController {
 			} else {
 				$input['name'] = $name;
 				$input['checklist_id'] = $checklist_id;
+				$input['status'] = $status;
 				$input['updated_by'] = $this->user_id;
 
 				if ($this->im->update($id, $input) > 0) {
@@ -104,5 +109,6 @@ class Items extends BaseController {
 		$request = $this->requestStream();
 		$this->name = isset($request['name']) ? $request['name'] : null;
 		$this->checklist_id = isset($request['checklist_id']) ? $request['checklist_id'] : null;
+		$this->status = isset($request['status']) ? $request['status'] : 0;
 	}
 }
