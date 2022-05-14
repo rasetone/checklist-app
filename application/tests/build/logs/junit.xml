@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="14" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="1.042370">
+    <testsuite name="CodeIgniter Application Test Suite" tests="14" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="1.042370">
+      <testsuite name="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" tests="7" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.543870">
+        <testcase name="test_index" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="13" assertions="1" time="0.241100"/>
+        <testcase name="test_index_401_unauthorized" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="19" assertions="1" time="0.047598"/>
+        <testcase name="test_create" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="24" assertions="1" time="0.066778"/>
+        <testcase name="test_create_500" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="34" assertions="1" time="0.045242"/>
+        <testcase name="test_update" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="40" assertions="1" time="0.050594"/>
+        <testcase name="test_update_404" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="50" assertions="1" time="0.043209"/>
+        <testcase name="test_delete" class="Checklist_test" classname="Checklist_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Checklist_test.php" line="60" assertions="1" time="0.049347"/>
+      </testsuite>
+      <testsuite name="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" tests="7" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.498501">
+        <testcase name="test_index" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="15" assertions="1" time="0.110089"/>
+        <testcase name="test_index_401_unauthorized" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="21" assertions="1" time="0.056341"/>
+        <testcase name="test_create" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="26" assertions="1" time="0.069262"/>
+        <testcase name="test_create_500" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="36" assertions="1" time="0.058070"/>
+        <testcase name="test_update" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="42" assertions="1" time="0.073287"/>
+        <testcase name="test_update_404" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="52" assertions="1" time="0.061428"/>
+        <testcase name="test_delete" class="Items_test" classname="Items_test" file="/home/rahmat/Documents/rahmatfiles/localhost/checklist-app/application/tests/controllers/Items_test.php" line="62" assertions="1" time="0.070024"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
