@@ -23,14 +23,14 @@ class Auth extends BaseController {
 			$this->response(['message' => 'Invalid User'], 401);
 		} else {
 			$key = $_SERVER['JWT_KEY'];
-	    $token = array(
-	      "id" => $user->id,
-	      "name" => $user->username,
-	    );
-	 
-	    $jwt = JWT::encode($token, $key, 'HS256');
+			$token = array(
+				"id" => $user->id,
+				"name" => $user->username,
+			);
 
-	    $this->response(['data' => ['token' => $jwt]]);
+			$jwt = JWT::encode($token, $key, 'HS256');
+
+			$this->response(['data' => ['token' => $jwt]]);
 		}
 
 	}
