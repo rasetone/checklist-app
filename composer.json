@@ -13,7 +13,8 @@
 	"require": {
 		"php": ">=5.3.7",
 		"firebase/php-jwt": "^6.1",
-		"vlucas/phpdotenv": "^5.4"
+		"vlucas/phpdotenv": "^5.4",
+		"predis/predis": "^1.1"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

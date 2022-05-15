@@ -2,6 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once(APPPATH."controllers/BaseController.php");
 
+use Predis\Client;
+
 class Checklist extends BaseController {
 	protected $user_id;
 
@@ -15,21 +17,26 @@ class Checklist extends BaseController {
 	}
 
 	public function index() {
+		#sample caching data with redis
+		$client = new Predis\Client([
+	    'scheme' => 'tcp',
+	    'host'   => '127.0.0.1',
+	    'port'   => 6379,
+		]);
+
 		$key = 'all_checklist';
 
-		if($this->cache->redis->is_supported()) {
-			$cached = $this->cache->get($key);
-			
-			if($cached != null){
-				$results = $cached;
-			} else{
-				$results = $this->cm->getAll();
-				$this->cache->save($key, $results, 300);
-			}
-		} else {
-			$results = $this->cm->getAll();	
+		$cached = $client->get($key);
+		
+		if($cached != null){
+			$results = $cached;
+		} else{
+			$results = serialize($this->cm->getAll());
+			$client->set($key, $results);
+			$client->expire($key, 300);     
 		}
-		$this->response(['data' => $results]);
+		
+		$this->response(['data' => unserialize($results)]);
 	}
 
 	public function create() {
