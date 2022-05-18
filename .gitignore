@@ -7,6 +7,10 @@
 .DS_Store
 .env
 
+application/tests/build/*
+application/tests/.phpunit.result.cache
+application/.env
+
 application/cache/*
 !application/cache/index.html
 
@@ -23,8 +27,3 @@ user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 vendor/*
-
-application/test/build/*
-application/test/.phpunit.result.cache
-
-application/.env

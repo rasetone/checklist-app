@@ -10,7 +10,6 @@ class Checklist extends BaseController {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('Checklist_model', 'cm');
-		$this->load->driver('cache', array('adapter' => 'redis', 'backup' => 'file'));
 		$this->checkToken();
 		$decoded_token = $this->decodeToken();
 		$this->user_id = $decoded_token['id'];
@@ -19,9 +18,9 @@ class Checklist extends BaseController {
 	public function index() {
 		#sample caching data with redis
 		$client = new Predis\Client([
-	    'scheme' => 'tcp',
-	    'host'   => '127.0.0.1',
-	    'port'   => 6379,
+		 	'scheme' => 'tcp',
+			'host'   => '127.0.0.1',
+			'port'   => 6379,
 		]);
 
 		$key = 'all_checklist';
